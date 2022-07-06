@@ -1,0 +1,28 @@
+name: Push app to heroku
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Release Client
+        uses: akhileshns/heroku-deploy@v3.0.4
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "thomas-dev-project-0-client"
+          heroku_email: ${{secrets.HEROKU_API_KEY}}
+        env:
+          HD_APP_BASE: "packages/client"
+      - name: Release Server
+        uses: akhileshns/heroku-deploy@v3.0.4
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "thomas-dev-project-0-server"
+          heroku_email: ${{secrets.HEROKU_API_KEY}}
+        env:
+          HD_APP_BASE: "packages/server"
