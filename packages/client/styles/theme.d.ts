@@ -2,19 +2,11 @@ import "@mui/material/styles";
 
 declare module "@mui/material/styles" {
   interface Palette extends CustomPalette {
-    neutral: {
-      main: string;
-      light: string;
-      dark: string;
-    };
+    neutral: Palette["primary"];
   }
 
   interface PaletteOptions extends CustomPalette {
-    neutral: {
-      main: string;
-      light: string;
-      dark: string;
-    };
+    neutral: PaletteOptions["primary"];
   }
 }
 
