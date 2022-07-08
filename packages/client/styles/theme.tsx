@@ -5,15 +5,15 @@ export const theme = createTheme({
   palette: {
     primary: {
       main: "#DC5200",
-      light: "#FF8B47",
+      light: "#FFB833",
       dark: "#A33C00",
       contrastText: "#F5F5F5",
     },
     secondary: {
-      main: "#D6D6D6",
-      light: "#F5F5F5",
-      dark: "#A3A3A3",
-      contrastText: "#DC5200",
+      main: "#202224",
+      light: "#3D3D3E",
+      dark: "#0A0A0B",
+      contrastText: "#F5F5F5",
     },
     success: {
       main: "#66bb6a",
@@ -35,6 +35,17 @@ export const theme = createTheme({
     background: {
       default: "#D6D6D6",
     },
+  },
+  typography: {
+    h1: {
+      fontSize: "60px",
+      fontWeight: "bold",
+    },
+    h2: { fontSize: "50px" },
+    h3: { fontSize: "40px" },
+    h4: { fontSize: "30px" },
+    h5: { fontSize: "20px" },
+    button: { fontSize: "14px", fontWeight: "bold" },
   },
   components: {
     MuiButton: {
