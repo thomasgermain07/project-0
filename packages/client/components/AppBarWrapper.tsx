@@ -4,6 +4,7 @@ import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 interface IAppBarWrapperProps {
   children: React.ReactNode;
@@ -11,6 +12,7 @@ interface IAppBarWrapperProps {
 
 export function AppBarWrapper({ children }: IAppBarWrapperProps) {
   const { t } = useTranslation("common");
+  const router = useRouter();
 
   return (
     <div>
@@ -18,18 +20,24 @@ export function AppBarWrapper({ children }: IAppBarWrapperProps) {
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Stack flexDirection="row" justifyContent="flex-start" minWidth="25%">
             <Button>
-              <Typography color="primary.contrastText">
+              <Typography
+                color="primary.contrastText"
+                variant="button"
+                onClick={() => router.push("/events")}
+              >
                 {t("appbar.event")}
+              </Typography>
+            </Button>
+            <Button>
+              <Typography color="primary.contrastText" variant="button">
+                {t("appbar.categories")}
               </Typography>
             </Button>
           </Stack>
           <Stack>
             <Typography
-              onClick={() => {
-                /* TODO: redirect to homepage */
-              }}
-              fontSize="40px"
-              fontWeight="bold"
+              onClick={() => router.push("/homepage")}
+              variant="h1"
               color="primary.contrastText"
               sx={{
                 "&:hover": { cursor: "pointer" },
