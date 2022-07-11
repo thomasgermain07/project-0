@@ -3,5 +3,6 @@ export type Event = {
   name: string;
   location: string;
   date: string;
+  description: string;
   coverImageUrl: string;
 };
