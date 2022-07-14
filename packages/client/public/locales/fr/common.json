@@ -2,5 +2,9 @@
   "title": "Stef Photo Passion",
   "appbar": {
     "event": "Évenements"
+  },
+  "share": {
+    "facebook": "Partager sur facebook",
+    "copy": "Copier le lien de la page"
   }
 }
