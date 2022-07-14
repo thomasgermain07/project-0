@@ -31,7 +31,7 @@ export function EventDescription({ event }: IEventDescriptionProps) {
     <CustomPaper
       sx={{
         flex: "1",
-        height: "800px",
+        height: "100%",
         minWidth: "250px",
         display: "flex",
         flexDirection: "column",
